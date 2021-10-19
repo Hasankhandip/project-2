@@ -18,7 +18,19 @@ $(window).on("load", function () {
 
 
 
+// scroll-top btn start
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 300) {
+    $(".scroll-top").addClass("active");
+  } else {
+    $(".scroll-top").removeClass("active");
+  }
+});
 
+$(".scroll-top").on("click", function () {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+});
+// scroll-top btn end
 
 // slick slider
 
@@ -38,7 +50,6 @@ $(window).on("scroll", function(){
     $(".header-section").removeClass("active");
   }
 })
-
 
 // aos animation
 AOS.init();
