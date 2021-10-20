@@ -1,5 +1,8 @@
 "use strict";
 
+    // aos animation
+    AOS.init();
+
 // preloader start
 $(window).on("load", function () {
   $(".preloader")
@@ -15,6 +18,24 @@ $(window).on("load", function () {
     );
 });
 // preloader end
+
+// header-section
+$(window).on("scroll", function(){
+  if ($(this).scrollTop() > 150) {
+    $(".header-section").addClass("active");
+  } else {
+    $(".header-section").removeClass("active");
+  }
+})
+
+// slick slider
+
+$(document).ready(function(){
+  $('.banner-slider').slick({
+    prevArrow: '<div class="prev"><i class="fas fa-arrow-left"></i></div>',
+    nextArrow: '<div class="next"><i class="fas fa-arrow-right"></i></div>'
+  });
+});
 
 
 
@@ -32,24 +53,10 @@ $(".scroll-top").on("click", function () {
 });
 // scroll-top btn end
 
-// slick slider
 
-$(document).ready(function(){
-  $('.banner-slider').slick({
-    prevArrow: '<div class="prev"><i class="fas fa-arrow-left"></i></div>',
-    nextArrow: '<div class="next"><i class="fas fa-arrow-right"></i></div>'
-  });
+// magnific popup
+$(document).ready(function() {
+  $('.pulse-btn').magnificPopup(
+    {type:'iframe'}
+    );
 });
-
-
-// header-section
-$(window).on("scroll", function(){
-  if ($(this).scrollTop() > 150) {
-    $(".header-section").addClass("active");
-  } else {
-    $(".header-section").removeClass("active");
-  }
-})
-
-// aos animation
-AOS.init();

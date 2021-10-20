@@ -20,12 +20,12 @@
   width: 200px;
 }
 .nav-link {
-  color: #fff !important;
+  color: #dbdbdb !important;
   font-weight: 400;
   padding: 25px 20px !important;
   transition: 0.4s;
   &:hover {
-    color: $main-color !important;
+    color: #fff !important;
   }
 }
 .dropdown-item {
@@ -98,15 +98,23 @@
   background: transparent !important;
 }
 .hdr-search-bar {
-  color: #fff;
+  color: #dbdbdb;
   font-size: 18px;
   margin-right: 60px;
+  transition: 0.4s;
+  &:hover {
+    color: #fff;
+  }
 }
 .hdr-social {
   display: flex;
 }
 .hdr-social-link {
-  color: #fff;
+  color: #dbdbdb;
   margin-right: 15px;
+  transition: 0.4s;
+  &:hover {
+    color: #fff;
+  }
 }
 // header-section scss end

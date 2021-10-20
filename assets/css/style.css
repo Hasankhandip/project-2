@@ -157,6 +157,31 @@ ul {
   -webkit-transition: all 1s;
   transition: all 1s;
   border: none;
+  z-index: 1;
+}
+
+.scroll-top:hover {
+  color: #1e273b;
+}
+
+.scroll-top:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.scroll-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background-color: #dbdbdb;
+  z-index: -1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .scroll-top.active {
@@ -330,7 +355,7 @@ ul {
 }
 
 .nav-link {
-  color: #fff !important;
+  color: #dbdbdb !important;
   font-weight: 400;
   padding: 25px 20px !important;
   -webkit-transition: 0.4s;
@@ -338,7 +363,7 @@ ul {
 }
 
 .nav-link:hover {
-  color: #086ad7 !important;
+  color: #fff !important;
 }
 
 .dropdown-item {
@@ -422,9 +447,15 @@ ul {
 }
 
 .hdr-search-bar {
-  color: #fff;
+  color: #dbdbdb;
   font-size: 18px;
   margin-right: 60px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hdr-search-bar:hover {
+  color: #fff;
 }
 
 .hdr-social {
@@ -434,8 +465,14 @@ ul {
 }
 
 .hdr-social-link {
-  color: #fff;
+  color: #dbdbdb;
   margin-right: 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hdr-social-link:hover {
+  color: #fff;
 }
 
 .preloader {
@@ -789,6 +826,8 @@ ul {
   border-radius: 50%;
   border: 1px dashed #086ad7;
   margin-bottom: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @-webkit-keyframes service-img-wraper-animation {
@@ -1408,7 +1447,8 @@ ul {
 
 .contact-banner-section {
   background-image: url(/assets/images/contact-page-bg.jpg);
-  padding: 250px 0;
+  padding-top: 200px;
+  padding-bottom: 150px;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
